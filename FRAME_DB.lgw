@@ -1,0 +1,178 @@
+/BATCH  
+! /COM,ANSYS RELEASE 2020 R2           BUILD 20.2      UP20200601       12:50:35  
+/input,menust,tmp,''
+! /GRA,POWER  
+! /GST,ON 
+! /PLO,INFO,3 
+! /GRO,CURL,ON
+! /CPLANE,1   
+! /REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+! /REPLOT,RESIZE  
+/PREP7  
+!*  
+ET,1,BEAM188
+!*  
+! /REPLOT,RESIZE  
+!*  
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,EX,1,,2e11   
+MPDATA,PRXY,1,,0.3  
+SECTYPE,   1, BEAM, I, , 0  
+SECOFFSET, CENT 
+SECDATA,0.025,0.025,0.08,0.005,0.005,0.005,0,0,0,0,0,0  
+K, ,0,0,0,  
+K, ,0,0.3,0,
+K, ,0,0.6,0,
+K, ,1.2,0.6,0,  
+K, ,1.2,0.3,0,  
+K, ,1.2,0,0,
+K, ,0,0,0.5,
+K, ,0,0.3,0.5,  
+K, ,0,0.6,0.5,  
+K, ,1.2,0.6,0.5,
+K, ,1.2,0.3,0.5,
+K, ,1.2,0,0.5,  
+K, ,1.2,0,0.5,  
+! /VIEW,1,1,1,1   
+! /ANG,1  
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /REPLOT 
+KDELE,      12  
+! /REPLOT 
+KDELE,      13  
+K, ,1.2,0,0.5,  
+L,       1,       2 
+L,       2,       3 
+L,       3,       4 
+L,       4,       5 
+L,       5,       6 
+L,       2,       5 
+L,       7,       8 
+L,       8,       9 
+L,       9,      10 
+L,      10,      11 
+L,      11,      12 
+L,       8,      11 
+L,       2,       8 
+L,       3,       9 
+L,       4,      10 
+L,       5,      11 
+TYPE,   1   
+MAT,       1
+REAL,   
+ESYS,       0   
+SECNUM,   1 
+!*  
+!*  
+LESIZE,ALL,0.05, , , ,1, , ,1,  
+FLST,2,16,4,ORDE,2  
+FITEM,2,1   
+FITEM,2,-16 
+LMESH,P51X  
+FINISH  
+/SOL
+FLST,2,4,3,ORDE,4   
+FITEM,2,1   
+FITEM,2,6   
+FITEM,2,-7  
+FITEM,2,12  
+!*  
+/GO 
+DK,P51X, ,0, ,0,ALL, , , , , ,  
+FLST,2,136,2,ORDE,8 
+FITEM,2,13  
+FITEM,2,-36 
+FITEM,2,49  
+FITEM,2,-72 
+FITEM,2,85  
+FITEM,2,-108
+FITEM,2,121 
+FITEM,2,-184
+SFBEAM,P51X,2,PRES,6000,6000, , , , ,0  
+! /STATUS,SOLU
+SOLVE   
+FINISH  
+/POST1  
+! PLDISP,1
+!*  
+! /EFACET,1   
+! PLNSOL, S,Z, 0,1.0  
+!*  
+! /EFACET,1   
+! PLNSOL, S,Z, 0,1.0  
+! /EFACET,1   
+! PLNSOL, S,Y, 0,1.0  
+FINISH  
+/SOL
+FINISH  
+/PREP7  
+FINISH  
+/SOL
+FINISH  
+/POST1  
+SET,LIST
+! /SHOW,WIN32C
+SET,FIRST   
+! /PLOPTS,INFO,3  
+! /CONTOUR,ALL,18 
+! /PNUM,MAT,1 
+! /NUMBER,1   
+! /REPLOT,RESIZE  
+! /UIS,ABORT,1  
+! /SHOW,WIN32 
+! /REPLOT,RESIZE  
+!*  
+! /EFACET,1   
+! PLNSOL, S,Z, 0,1.0  
+! /EFACET,1   
+! PLNSOL, S,Z, 0,1.0  
+!*  
+! PRNSOL,U,Z  
+! /REPLOT,RESIZE  
+! PRRSOL, 
+! PRRSOL, 
+!*  
+!*  
+!*  
+! PRESOL,S,COMP   
+!*  
+! PRNSOL,U,Z  
+!*  
+! PRNSOL,U,COMP   
+! PRNLD, , ,ALL   
+! PRNLD,F, ,ALL   
+! PRRSOL, 
+! PRNLD, , ,ALL   
+AVPRIN,0, , 
+ETABLE,SFY1,SMISC, 6
+!*  
+AVPRIN,0, , 
+ETABLE,SFY2,SMISC, 19   
+!*  
+! PLLS,SFY1,SFY2,1,0,0
+AVPRIN,0, , 
+ETABLE,Mz1,SMISC, 3 
+!*  
+AVPRIN,0, , 
+ETABLE,Mz2,SMISC, 16
+!*  
+! PLLS,MZ1,MZ2,1,0,0  
+! LGWRITE,'FRAME_DB','lgw','C:\Users\arian\Desktop\APDL_FILE_FRAME\',COMMENT

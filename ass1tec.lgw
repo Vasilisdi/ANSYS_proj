@@ -1,0 +1,235 @@
+/BATCH  
+! /COM,ANSYS RELEASE 2020 R2           BUILD 20.2      UP20200601       23:37:23  
+!*  
+! /REPLOT,RESIZE  
+/PREP7  
+!*  
+ET,1,BEAM188
+!*  
+!*  
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,EX,1,,2e11   
+MPDATA,PRXY,1,,0.3  
+SECTYPE,   1, BEAM, CSOLID, , 0 
+SECOFFSET, CENT 
+SECDATA,0.125,0,0,0,0,0,0,0,0,0,0,0 
+K, ,0,0,0,  
+K, ,0,5,0,  
+K, ,6,5,0,  
+K, ,6,0,0,  
+K, ,10,5,0, 
+L,       1,       2 
+L,       2,       3 
+L,       3,       4 
+L,       3,       5 
+!*  
+LESIZE,ALL,0.1, , , ,1, , ,1,   
+FLST,2,4,4,ORDE,2   
+FITEM,2,1   
+FITEM,2,-4  
+LMESH,P51X  
+! /PNUM,KP,0  
+! /PNUM,LINE,0
+! /PNUM,AREA,0
+! /PNUM,VOLU,0
+! /PNUM,NODE,0
+! /PNUM,TABN,0
+! /PNUM,SVAL,0
+! /NUMBER,0   
+!*  
+! /PNUM,ELEM,1
+! /REPLOT 
+!*  
+FINISH  
+/SOL
+FLST,2,1,3,ORDE,1   
+FITEM,2,1   
+!*  
+/GO 
+DK,P51X, , , ,0,UX,UY,UZ, , , , 
+FLST,2,1,3,ORDE,1   
+FITEM,2,4   
+!*  
+/GO 
+DK,P51X, , , ,0,UY,UZ, , , , ,  
+FLST,2,3,3,ORDE,3   
+FITEM,2,2   
+FITEM,2,-3  
+FITEM,2,5   
+!*  
+/GO 
+DK,P51X, ,0, ,0,UZ, , , , , ,   
+FLST,2,2,3,ORDE,2   
+FITEM,2,1   
+FITEM,2,4   
+DKDELE,P51X,ALL 
+FLST,2,1,3,ORDE,1   
+FITEM,2,1   
+!*  
+/GO 
+DK,P51X, ,0, ,0,UX,UY,UZ, , , , 
+FLST,2,1,3,ORDE,1   
+FITEM,2,4   
+!*  
+/GO 
+DK,P51X, ,0, ,0,UY,UZ, , , , ,  
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /PNUM,KP,0  
+! /PNUM,LINE,0
+! /PNUM,AREA,0
+! /PNUM,VOLU,0
+! /PNUM,NODE,0
+! /PNUM,TABN,0
+! /PNUM,SVAL,0
+! /NUMBER,0   
+!*  
+! /PNUM,ELEM,0
+! /REPLOT 
+!*  
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,0.924021,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /AUTO,1 
+! /REP,FAST   
+FLST,2,60,2,ORDE,2  
+FITEM,2,51  
+FITEM,2,-110
+SFBEAM,P51X,2,PRES,4000,4000, , , , ,0  
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+! /DIST, 1 ,1.082226,1
+! /REP,FAST   
+FLST,2,1,3,ORDE,1   
+FITEM,2,5   
+!*  
+/GO 
+FK,P51X,FY,-20000   
+! /STATUS,SOLU
+SOLVE   
+FINISH  
+/POST1  
+! PLDISP,2
+AVPRIN,0, , 
+ETABLE,ShearFI,SMISC, 6 
+!*  
+! /SHOW,WIN32C
+SET,FIRST   
+! /PLOPTS,INFO,3  
+! /CONTOUR,ALL,18 
+! /PNUM,MAT,1 
+! /NUMBER,1   
+! /REPLOT,RESIZE  
+! /UIS,ABORT,1  
+! /SHOW,WIN32 
+! /REPLOT,RESIZE  
+AVPRIN,0, , 
+ETABLE,ShearFI,SMISC, 6 
+!*  
+AVPRIN,0, , 
+ETABLE,ShearFJ,SMISC, 19
+!*  
+! PLETAB,SHEARFI,NOAV 
+! PLETAB,SHEARFI,NOAV 
+! PLLS,SHEARFI,SHEARFI,1,0,0  
+! LGWRITE,'ass1tec','lgw','C:\Users\arian\Desktop\assignment1\APDL\',COMMENT
